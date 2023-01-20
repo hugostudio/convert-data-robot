@@ -1,3 +1,3 @@
-import convertDataService from "./convertDataService";
+import convertDataJsonService from "./convertDataJsonService";
 
-export { convertDataService };
+export { convertDataJsonService };
