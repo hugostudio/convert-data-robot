@@ -4,8 +4,8 @@ import { convertDataJsonService } from "../service";
 const convertDataJsonRouter = Router();
 
 convertDataJsonRouter.post("/by-now", async (req: Request, res: Response) => {
-  const param = req.body.data.post.elements;
-  req.body.data.post.elements = convertDataJsonService.execute(param);    
+  const param = req.body;
+  req.body = convertDataJsonService.execute(param);    
   res.set('Content-Type','application/json');
   res.send(req.body);
 });
